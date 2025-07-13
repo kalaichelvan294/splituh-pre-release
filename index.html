@@ -1,1 +1,247 @@
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splituh - Expense Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <style>
+        :root {
+            --primary-green: #009e60;
+            /* vibrant green */
+            --primary-dark: #005a32;
+            /* deep green */
+            --accent-green: #00c97b;
+            /* accent green */
+            --background: #f6fff8;
+            /* soft background */
+            --card-bg: #ffffff;
+            --text-dark: #1a2a1a;
+            --text-light: #fff;
+            --shadow: 0 4px 16px rgba(0, 158, 96, 0.10);
+            --logo-gradient: linear-gradient(90deg, #009e60 0%, #00c97b 100%);
+            --border-radius: 18px;
+        }
+
+        body {
+            font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background);
+            color: var(--text-dark);
+            min-height: 100vh;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        header {
+            background: none;
+            color: var(--primary-green);
+            padding: 2.5rem 1rem 1.5rem 1rem;
+            text-align: center;
+            box-shadow: none;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            position: relative;
+        }
+
+        .logo {
+            display: block;
+            margin: 0 auto 1rem auto;
+            max-width: 220px;
+            height: auto;
+            border-radius: 0;
+            box-shadow: none;
+            background: none;
+            padding: 0;
+        }
+
+        main {
+            padding: 0;
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 70vh;
+        }
+
+        section {
+            margin-bottom: 2.5rem;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 2.7rem;
+            letter-spacing: 1px;
+        }
+
+        h2.loading {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+            font-weight: 700;
+            background: linear-gradient(270deg, var(--primary-green), var(--accent-green), var(--primary-green));
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+            animation: gradientMove 2.5s ease-in-out infinite, fadeIn 1.2s cubic-bezier(.4, 0, .2, 1);
+        }
+
+        h3 {
+            color: var(--primary-dark);
+            font-size: 1.15rem;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .feature {
+            background: linear-gradient(120deg, #f6fff8 60%, #eafff3 100%);
+            border: 1px solid var(--accent-green);
+            border-radius: var(--border-radius);
+            padding: 1.7rem 1.3rem;
+            flex: 1 1 250px;
+            min-width: 220px;
+            box-shadow: var(--shadow);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .feature:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 8px 24px rgba(0, 158, 96, 0.18);
+            border-color: var(--primary-green);
+        }
+
+        .feature h3 {
+            margin-top: 0;
+        }
+
+        .feature p {
+            margin-bottom: 0;
+            color: #2d4a2d;
+        }
+
+        footer {
+            background: none;
+            color: var(--primary-green);
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 1rem;
+            box-shadow: none;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+
+        @media (max-width: 700px) {
+            main {
+                padding: 1rem 0.5rem 5rem 0.5rem;
+            }
+
+            .features {
+                flex-direction: column;
+                gap: 1.2rem;
+            }
+
+            header {
+                padding: 1.5rem 0.5rem 1rem 0.5rem;
+            }
+
+            .logo {
+                max-width: 80px;
+            }
+        }
+
+        ::selection {
+            background: var(--accent-green);
+            color: var(--text-light);
+        }
+
+        a {
+            color: var(--primary-green);
+            text-decoration: none;
+            transition: color 0.2s;
+            font-weight: 500;
+        }
+
+        a:hover {
+            color: var(--primary-dark);
+        }
+
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="splituh-full.png" alt="Splituh Logo" class="logo" />
+        <p
+            style="color: var(--primary-dark);font-size:1.2rem;display:flex;align-items:center;justify-content:center;gap:0.5rem;">
+            <i class="fa-solid fa-wallet" style="color:var(--primary-green);"></i>
+            Your ultimate expense tracker app
+        </p>
+    </header>
+    <main>
+        <section style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:60vh;">
+            <h2 class="loading" style="display:flex;align-items:center;gap:0.7rem;">
+                <i class="fa-solid fa-rocket" style="font-size:2rem;color:var(--accent-green);"></i>
+                Launching soon
+            </h2>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 Splituh. All rights reserved.</p>
+        <p style="display:flex;align-items:center;justify-content:center;gap:1.2rem;">Contact:
+            <a href="https://www.linkedin.com/in/kalaichelvan294" target="_blank" rel="noopener"
+                style="color:var(--primary-dark);font-weight:600;">
+                <i class="fa-brands fa-linkedin" style="margin-right:6px;color:#0A66C2;"></i>LinkedIn
+            </a>
+        </p>
+    </footer>
+</body>
+
+</html>
