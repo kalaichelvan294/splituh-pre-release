@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions - Splituh Expense Tracking App</title>
+    <meta name="description" content="Read Splituh's Terms and Conditions. Legal terms for using our expense tracking and bill splitting application. Updated July 2025.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://splituh.com/terms.html">
+    <link rel="icon" type="image/png" href="assets/logo/s-green.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <style>
+        :root {
+            --primary-green: #10b981;
+            --primary-dark: #059669;
+            --accent-green: #34d399;
+            --light-green: #d1fae5;
+            --background: #ffffff;
+            --secondary-bg: #f8fafc;
+            --card-bg: rgba(255, 255, 255, 0.8);
+            --text-dark: #0f172a;
+            --text-gray: #64748b;
+            --text-light: #ffffff;
+            --border: #e2e8f0;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            --gradient-primary: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            --gradient-hero: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 50%, #bbf7d0 100%);
+            --border-radius: 20px;
+            --border-radius-sm: 12px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--background);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.25rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-nav {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary-green);
+        }
+
+        .logo-nav img {
+            width: 140px;
+            height: auto;
+            filter: drop-shadow(0 2px 4px rgba(16, 185, 129, 0.1));
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-gray);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            padding: 0.5rem 1rem;
+            border-radius: var(--border-radius-sm);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-green);
+            background: rgba(16, 185, 129, 0.05);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            background: var(--gradient-hero);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(circle at 20% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(52, 211, 153, 0.1) 0%, transparent 50%);
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .page-header h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        .page-header p {
+            font-size: 1.25rem;
+            color: var(--text-gray);
+            line-height: 1.7;
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem 4rem;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            margin-bottom: 2.5rem;
+            border: 1px solid rgba(226, 232, 240, 0.5);
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .content-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .content-section:hover::before {
+            transform: scaleX(1);
+        }
+
+        .content-section:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .content-section h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--primary-green);
+        }
+
+        .content-section h3 {
+            font-size: 1.375rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            margin-top: 2rem;
+            color: var(--text-dark);
+        }
+
+        .content-section p {
+            margin-bottom: 1.25rem;
+            color: var(--text-gray);
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        .content-section ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .content-section li {
+            margin-bottom: 0.75rem;
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--primary-green);
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 2.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--border-radius-sm);
+            background: rgba(16, 185, 129, 0.05);
+            transition: var(--transition);
+        }
+
+        .back-link:hover {
+            color: var(--primary-dark);
+            background: rgba(16, 185, 129, 0.1);
+            transform: translateX(-5px);
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--text-dark) 0%, #1e293b 100%);
+            color: var(--text-light);
+            padding: 4rem 2rem 3rem;
+            text-align: center;
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: var(--gradient-primary);
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: var(--transition);
+            font-weight: 500;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--border-radius-sm);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-green);
+            background: rgba(16, 185, 129, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid #334155;
+            color: #94a3b8;
+            font-size: 0.95rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .main-content {
+                padding: 6rem 1rem 4rem;
+            }
+
+            .content-section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo-nav">
+                <img src="assets/logo/splituh-green.png" alt="Splituh Logo" />
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <a href="index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i>
+                Back to Home
+            </a>
+            <div class="page-header">
+                <h1>Terms and Conditions</h1>
+                <p>Effective Date: Jul 13, 2025</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <div class="content-section">
+            <p>Welcome to Splituh, a group finance management application designed to simplify expense tracking, bill splitting, and financial collaboration among friends, families, and teams. By accessing or using Splituh, you agree to be bound by these Terms and Conditions.</p>
+            <p><strong>Please read them carefully.</strong></p>
+        </div>
+
+        <div class="content-section">
+            <h2>1. Acceptance of Terms</h2>
+            <p>By downloading, installing, or using Splituh, you agree to comply with and be legally bound by these Terms. If you do not agree, please do not use the app.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>2. Use of the App</h2>
+            <p>Splituh allows users to:</p>
+            <ul>
+                <li>Create and manage groups for shared expenses</li>
+                <li>Add, edit, and delete transactions</li>
+                <li>Track balances and settlements</li>
+                <li>Export financial summaries</li>
+            </ul>
+            <p>You agree to use the app only for lawful purposes and in accordance with these Terms.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>3. Account Registration and Security</h2>
+            <ul>
+                <li>You may be required to register an account using your email, phone number, or third-party login.</li>
+                <li>You are responsible for maintaining the confidentiality of your account credentials.</li>
+                <li>You agree to notify us immediately of any unauthorized use of your account.</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>4. Payments and Settlements</h2>
+            <p>Splituh may facilitate tracking of payments and settlements but does not process actual financial transactions unless integrated with third-party payment providers. You acknowledge that:</p>
+            <ul>
+                <li>Splituh is not a bank or financial institution.</li>
+                <li>Splituh is just an app for noting down transactions; it will not process actual payments.</li>
+                <li>Splituh is not liable for disputes between users regarding financial transactions.</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>5. Compliance with Laws</h2>
+            <p>Splituh complies with:</p>
+            <ul>
+                <li>Information Technology Act, 2000</li>
+                <li>IT Rules, 2021</li>
+                <li>Digital Personal Data Protection Act, 2023 (DPDPA)</li>
+                <li>GDPR, if applicable to EU users</li>
+            </ul>
+            <p>We collect and process personal data only with consent and for specified purposes. For details, refer to our Privacy Policy.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>6. Prohibited Conduct</h2>
+            <p>You agree not to:</p>
+            <ul>
+                <li>Use the app for fraudulent or illegal activities</li>
+                <li>Impersonate another person or misrepresent your affiliation</li>
+                <li>Interfere with the app's functionality or security</li>
+                <li>Upload viruses or malicious code</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>7. Intellectual Property</h2>
+            <p>All content, trademarks, and technology used in Splituh are owned by or licensed to us. You may not copy, modify, distribute, or reverse-engineer any part of the app without permission.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>8. Modifications and Updates</h2>
+            <p>We may update or modify Splituh and these Terms at any time. Continued use of the app after changes constitutes acceptance of the revised Terms.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>9. Disclaimer of Warranties</h2>
+            <p>Splituh is provided "as is" and "as available." We do not guarantee that the app will be error-free or uninterrupted. We disclaim all warranties, express or implied, including merchantability and fitness for a particular purpose.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>10. Limitation of Liability</h2>
+            <p>To the maximum extent permitted by law, Splituh and its affiliates shall not be liable for any indirect, incidental, or consequential damages arising from your use of the app.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>11. Indemnification</h2>
+            <p>You agree to indemnify and hold harmless Splituh, its developers, and affiliates from any claims, damages, or expenses arising from your use of the app or violation of these Terms.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>12. Governing Law</h2>
+            <p>These Terms shall be governed by and construed in accordance with the laws of the Indian government.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>13. Contact Us</h2>
+            <p>If you have any questions or concerns about these Terms, please contact us at:</p>
+            <p><strong>Email:</strong> idho-vandhutten@splituh.com</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/kalaichelvan294" target="_blank" rel="noopener">
+                    <i class="fab fa-linkedin"></i>
+                    kalaiChelvan294
+                </a>
+                <a href="https://www.linkedin.com/in/sunil-kumar-934849140" target="_blank" rel="noopener">
+                    <i class="fab fa-linkedin"></i>
+                    kuttySk
+                </a>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Splituh. All rights reserved. Built with ❤️ for better financial management.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

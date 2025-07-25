@@ -1,250 +1,762 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="https://schema.org/WebPage">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Splituh - Expense Tracker</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Primary Meta Tags -->
+    <title>Splituh - Smart Expense Tracking & Bill Splitting App | Coming Soon</title>
+    <meta name="title" content="Splituh - Smart Expense Tracking & Bill Splitting App | Coming Soon">
+    <meta name="description" content="Splituh is the ultimate expense tracking app for groups. Split bills, track expenses, and manage finances with friends and family. Smart analytics, real-time sync, and mobile-first design. Pre-release coming soon.">
+    <meta name="keywords" content="expense tracker, bill splitting, group expenses, expense management, split bills, financial app, money management, expense sharing, budget tracker, splitwise alternative">
+    <meta name="author" content="Splituh Team - Kalai chelvan & Sunil Kumar">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://splituh.com/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://splituh.com/">
+    <meta property="og:title" content="Splituh - Smart Expense Tracking & Bill Splitting App">
+    <meta property="og:description" content="The ultimate expense tracking app for groups. Split bills, track expenses, and manage finances with friends and family. Smart analytics and real-time sync.">
+    <meta property="og:image" content="https://splituh.com/assets/logo/splituh-green.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Splituh">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://splituh.com/">
+    <meta property="twitter:title" content="Splituh - Smart Expense Tracking & Bill Splitting App">
+    <meta property="twitter:description" content="The ultimate expense tracking app for groups. Split bills, track expenses, and manage finances with friends and family. Smart analytics and real-time sync.">
+    <meta property="twitter:image" content="https://splituh.com/assets/logo/splituh-green.png">
+    <meta property="twitter:creator" content="@splituh">
+    <meta property="twitter:site" content="@splituh">
+
+    <!-- Favicon and Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/logo/s-green.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/logo/s-green.png">
+    <link rel="apple-touch-icon" href="assets/logo/s-green.png">
+    <link rel="shortcut icon" href="assets/logo/s-green.png">
+
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <!-- Fonts and Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Splituh",
+      "description": "Smart expense tracking and bill splitting application for groups",
+      "url": "https://splituh.com",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web, iOS, Android",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Kalai chelvan",
+          "url": "https://www.linkedin.com/in/kalaichelvan294"
+        },
+        {
+          "@type": "Person",
+          "name": "Sunil Kumar",
+          "url": "https://www.linkedin.com/in/sunil-kumar-934849140"
+        }
+      ],
+      "publisher": {
+        "@type": "Organization",
+        "name": "Splituh",
+        "url": "https://splituh.com"
+      }
+    }
+    </script>
     <style>
         :root {
-            --primary-green: #009e60;
-            /* vibrant green */
-            --primary-dark: #005a32;
-            /* deep green */
-            --accent-green: #00c97b;
-            /* accent green */
-            --background: #f6fff8;
-            /* soft background */
-            --card-bg: #ffffff;
-            --text-dark: #1a2a1a;
-            --text-light: #fff;
-            --shadow: 0 4px 16px rgba(0, 158, 96, 0.10);
-            --logo-gradient: linear-gradient(90deg, #009e60 0%, #00c97b 100%);
-            --border-radius: 18px;
+            --primary-green: #10b981;
+            --primary-dark: #059669;
+            --accent-green: #34d399;
+            --light-green: #d1fae5;
+            --background: #ffffff;
+            --secondary-bg: #f8fafc;
+            --card-bg: rgba(255, 255, 255, 0.8);
+            --text-dark: #0f172a;
+            --text-gray: #64748b;
+            --text-light: #ffffff;
+            --border: #e2e8f0;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            --gradient-primary: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            --gradient-hero: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 50%, #bbf7d0 100%);
+            --border-radius: 20px;
+            --border-radius-sm: 12px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         body {
-            font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--background);
+            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--background);
             color: var(--text-dark);
-            min-height: 100vh;
+            line-height: 1.6;
+            overflow-x: hidden;
         }
 
-        @keyframes fadeIn {
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.25rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-nav {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary-green);
+        }
+
+        .logo-nav img {
+            width: 140px;
+            height: auto;
+            filter: drop-shadow(0 2px 4px rgba(16, 185, 129, 0.1));
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-gray);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            padding: 0.5rem 1rem;
+            border-radius: var(--border-radius-sm);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-green);
+            background: rgba(16, 185, 129, 0.05);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 10rem 2rem 8rem;
+            text-align: center;
+            background: var(--gradient-hero);
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(circle at 20% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(52, 211, 153, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            width: 100%;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        .hero p {
+            font-size: 1.375rem;
+            color: var(--text-gray);
+            margin-bottom: 3rem;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1.25rem 2.5rem;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            cursor: pointer;
+            border: none;
+            font-size: 1.1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: var(--text-light);
+            box-shadow: var(--shadow-lg);
+            border: 2px solid transparent;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .btn i {
+            font-size: 1.2rem;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 8rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            background: var(--secondary-bg);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .section-header h2 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+            letter-spacing: -0.02em;
+        }
+
+        .section-header p {
+            font-size: 1.25rem;
+            color: var(--text-gray);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            padding: 0 1rem;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            border: 1px solid rgba(226, 232, 240, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+            border-color: rgba(16, 185, 129, 0.2);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-primary);
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+            color: var(--text-light);
+            font-size: 2rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            color: var(--text-dark);
+        }
+
+        .feature-card p {
+            color: var(--text-gray);
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        /* Stats Section */
+        .stats {
+            background: var(--primary-green);
+            color: var(--text-light);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .stats-grid {
+            max-width: 800px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .stat-item h3 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item p {
+            opacity: 0.9;
+            font-size: 1.125rem;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--text-dark) 0%, #1e293b 100%);
+            color: var(--text-light);
+            padding: 4rem 2rem 3rem;
+            text-align: center;
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: var(--gradient-primary);
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: var(--transition);
+            font-weight: 500;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--border-radius-sm);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-green);
+            background: rgba(16, 185, 129, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid #334155;
+            color: #94a3b8;
+            font-size: 0.95rem;
+        }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            33% {
+                transform: translateY(-15px) rotate(2deg);
+            }
+            66% {
+                transform: translateY(-5px) rotate(-1deg);
+            }
+        }
+
+        @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(30px);
+                transform: translateY(40px);
             }
-
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
 
-        header {
-            background: none;
-            color: var(--primary-green);
-            padding: 2.5rem 1rem 1.5rem 1rem;
-            text-align: center;
-            box-shadow: none;
-            border-bottom-left-radius: 0;
-            border-bottom-right-radius: 0;
-            position: relative;
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
 
-        .logo {
-            display: block;
-            margin: 0 auto 1rem auto;
-            max-width: 220px;
-            height: auto;
-            border-radius: 0;
-            box-shadow: none;
-            background: none;
-            padding: 0;
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out;
         }
 
-        main {
-            padding: 0;
-            max-width: 900px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 70vh;
+        .slide-in {
+            animation: slideInLeft 0.8s ease-out;
         }
 
-        section {
-            margin-bottom: 2.5rem;
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .features-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 2rem;
+            }
+
+            .feature-card {
+                padding: 2.5rem;
+            }
         }
 
-        h1,
-        h2,
-        h3 {
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
 
-        h1 {
-            font-size: 2.7rem;
-            letter-spacing: 1px;
-        }
+            .hero {
+                padding: 8rem 1.5rem 6rem;
+                min-height: 90vh;
+            }
 
-        h2.loading {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            letter-spacing: 1px;
-            font-weight: 700;
-            background: linear-gradient(270deg, var(--primary-green), var(--accent-green), var(--primary-green));
-            background-size: 200% 200%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            color: transparent;
-            animation: gradientMove 2.5s ease-in-out infinite, fadeIn 1.2s cubic-bezier(.4, 0, .2, 1);
-        }
+            .hero h1 {
+                font-size: 2.75rem;
+                margin-bottom: 1.5rem;
+            }
 
-        h3 {
-            color: var(--primary-dark);
-            font-size: 1.15rem;
-        }
+            .hero p {
+                font-size: 1.2rem;
+                margin-bottom: 2.5rem;
+            }
 
-        .features {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            justify-content: center;
-        }
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
 
-        .feature {
-            background: linear-gradient(120deg, #f6fff8 60%, #eafff3 100%);
-            border: 1px solid var(--accent-green);
-            border-radius: var(--border-radius);
-            padding: 1.7rem 1.3rem;
-            flex: 1 1 250px;
-            min-width: 220px;
-            box-shadow: var(--shadow);
-            transition: transform 0.2s, box-shadow 0.2s;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        .feature:hover {
-            transform: translateY(-6px) scale(1.03);
-            box-shadow: 0 8px 24px rgba(0, 158, 96, 0.18);
-            border-color: var(--primary-green);
-        }
-
-        .feature h3 {
-            margin-top: 0;
-        }
-
-        .feature p {
-            margin-bottom: 0;
-            color: #2d4a2d;
-        }
-
-        footer {
-            background: none;
-            color: var(--primary-green);
-            text-align: center;
-            padding: 1rem;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            font-size: 1rem;
-            box-shadow: none;
-            border-top-left-radius: 0;
-            border-top-right-radius: 0;
-        }
-
-        @media (max-width: 700px) {
-            main {
-                padding: 1rem 0.5rem 5rem 0.5rem;
+            .btn {
+                width: 100%;
+                max-width: 320px;
+                justify-content: center;
+                padding: 1.125rem 2rem;
             }
 
             .features {
+                padding: 6rem 1.5rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .feature-card {
+                padding: 2rem;
+            }
+
+            .section-header h2 {
+                font-size: 2.25rem;
+            }
+
+            .footer-links {
                 flex-direction: column;
-                gap: 1.2rem;
-            }
-
-            header {
-                padding: 1.5rem 0.5rem 1rem 0.5rem;
-            }
-
-            .logo {
-                max-width: 80px;
+                gap: 1.5rem;
             }
         }
 
-        ::selection {
-            background: var(--accent-green);
-            color: var(--text-light);
-        }
-
-        a {
-            color: var(--primary-green);
-            text-decoration: none;
-            transition: color 0.2s;
-            font-weight: 500;
-        }
-
-        a:hover {
-            color: var(--primary-dark);
-        }
-
-        @keyframes gradientMove {
-            0% {
-                background-position: 0% 50%;
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.25rem;
             }
 
-            50% {
-                background-position: 100% 50%;
+            .hero p {
+                font-size: 1.1rem;
             }
 
-            100% {
-                background-position: 0% 50%;
+            .feature-card {
+                padding: 1.5rem;
+            }
+
+            .feature-icon {
+                width: 70px;
+                height: 70px;
+                font-size: 1.75rem;
             }
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <img src="splituh-full.png" alt="Splituh Logo" class="logo" />
-        <p
-            style="color: var(--primary-dark);font-size:1.2rem;display:flex;align-items:center;justify-content:center;gap:0.5rem;">
-            <i class="fa-solid fa-wallet" style="color:var(--primary-green);"></i>
-            Your ultimate expense tracker app
-        </p>
-    </header>
-    <main>
-        <section style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:60vh;">
-            <h2 class="loading" style="display:flex;align-items:center;gap:0.7rem;">
-                <i class="fa-solid fa-rocket" style="font-size:2rem;color:var(--accent-green);"></i>
-                Cooking...
-            </h2>
-        </section>
-    </main>
-    <footer>
-        <p>© 2025 Splituh. All rights reserved.</p>
-        <p style="display:flex;align-items:center;justify-content:center;gap:1.2rem;">Contact:
-            <a href="https://www.linkedin.com/in/kalaichelvan294" target="_blank" rel="noopener"
-                style="color:var(--primary-dark);font-weight:600;">
-                <i class="fa-brands fa-linkedin" style="margin-right:6px;color:#0A66C2;"></i>kalaiChelvan294
-            </a>
-            <a href="https://www.linkedin.com/in/sunil-kumar-934849140" target="_blank" rel="noopener"
-                style="color:var(--primary-dark);font-weight:600;">
-                <i class="fa-brands fa-linkedin" style="margin-right:6px;color:#0A66C2;"></i>kuttySk
-            </a>
-        </p>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo-nav">
+                <img src="assets/logo/splituh-green.png" alt="Splituh Logo" />
+            </div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" itemscope itemtype="https://schema.org/SoftwareApplication">
+        <div class="hero-content fade-in">
+            <h1 itemprop="name">Smart Expense Tracking Made Simple</h1>
+            <p itemprop="description">Take control of your finances with Splituh - the ultimate expense tracker that makes managing money effortless and intuitive. Split bills with friends, track group expenses, and get smart analytics for better financial decisions.</p>
+            <div class="cta-buttons">
+                <div class="btn btn-primary" role="button" aria-label="Application under construction">
+                    <i class="fas fa-tools" aria-hidden="true"></i>
+                    Under Construction
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features" itemscope itemtype="https://schema.org/ItemList">
+        <div class="section-header">
+            <h2 itemprop="name">Everything You Need to Manage Money</h2>
+            <p itemprop="description">Powerful features designed to simplify your financial life and help you make smarter spending decisions.</p>
+        </div>
+        <div class="features-grid">
+            <article class="feature-card fade-in" itemprop="itemListElement" itemscope itemtype="https://schema.org/SoftwareFeature">
+                <div class="feature-icon">
+                    <i class="fas fa-chart-line" aria-hidden="true"></i>
+                </div>
+                <h3 itemprop="name">Smart Analytics</h3>
+                <p itemprop="description">Get detailed insights into your spending patterns with beautiful charts and intelligent categorization for better financial decisions.</p>
+            </article>
+            <article class="feature-card fade-in" itemprop="itemListElement" itemscope itemtype="https://schema.org/SoftwareFeature">
+                <div class="feature-icon">
+                    <i class="fas fa-users" aria-hidden="true"></i>
+                </div>
+                <h3 itemprop="name">Group Expenses</h3>
+                <p itemprop="description">Split bills with friends and family effortlessly. Track who owes what and settle up with ease using our intelligent bill splitting algorithm.</p>
+            </article>
+            <article class="feature-card fade-in" itemprop="itemListElement" itemscope itemtype="https://schema.org/SoftwareFeature">
+                <div class="feature-icon">
+                    <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+                </div>
+                <h3 itemprop="name">Mobile First Design</h3>
+                <p itemprop="description">Designed for your phone. Add expenses on the go with our lightning-fast mobile interface optimized for touch interactions.</p>
+            </article>
+            <article class="feature-card fade-in" itemprop="itemListElement" itemscope itemtype="https://schema.org/SoftwareFeature">
+                <div class="feature-icon">
+                    <i class="fas fa-sync" aria-hidden="true"></i>
+                </div>
+                <h3 itemprop="name">Real-time Sync</h3>
+                <p itemprop="description">Access your expense data anywhere, anytime. Seamless synchronization across all your devices with instant updates and offline support.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" itemscope itemtype="https://schema.org/Organization">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="terms.html" rel="nofollow">
+                    <i class="fas fa-file-contract" aria-hidden="true"></i>
+                    Terms & Conditions
+                </a>
+                <a href="privacy.html" rel="nofollow">
+                    <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                    Privacy Policy
+                </a>
+                <a href="about.html">
+                    <i class="fas fa-users" aria-hidden="true"></i>
+                    About Us
+                </a>
+                <a href="https://www.linkedin.com/in/kalaichelvan294" target="_blank" rel="noopener nofollow" itemprop="founder" itemscope itemtype="https://schema.org/Person">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                    <span itemprop="name">Kalai chelvan</span>
+                </a>
+                <a href="https://www.linkedin.com/in/sunil-kumar-934849140" target="_blank" rel="noopener nofollow" itemprop="founder" itemscope itemtype="https://schema.org/Person">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                    <span itemprop="name">Sunil Kumar</span>
+                </a>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 <span itemprop="name">Splituh</span>. All rights reserved. Built with ❤️ for better financial management.</p>
+                <p><small>Expense tracking app for groups | Bill splitting made simple | Smart financial management</small></p>
+            </div>
+        </div>
     </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(255, 255, 255, 0.98)';
+                nav.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                nav.style.background = 'rgba(255, 255, 255, 0.95)';
+                nav.style.boxShadow = 'none';
+            }
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all feature cards
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            observer.observe(card);
+        });
+    </script>
 </body>
 
 </html>
