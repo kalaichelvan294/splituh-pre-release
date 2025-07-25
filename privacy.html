@@ -106,6 +106,73 @@
             background: rgba(16, 185, 129, 0.05);
         }
 
+        .nav-links a.active {
+            color: var(--primary-green);
+            background: rgba(16, 185, 129, 0.1);
+            font-weight: 600;
+        }
+
+        /* Mobile Navigation */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-gray);
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: var(--border-radius-sm);
+            transition: var(--transition);
+        }
+
+        .mobile-menu-btn:hover {
+            color: var(--primary-green);
+            background: rgba(16, 185, 129, 0.05);
+        }
+
+        .mobile-nav {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .mobile-nav.active {
+            display: block;
+        }
+
+        .mobile-nav ul {
+            list-style: none;
+            padding: 1rem 2rem;
+            margin: 0;
+        }
+
+        .mobile-nav li {
+            margin-bottom: 0.5rem;
+        }
+
+        .mobile-nav a {
+            display: block;
+            color: var(--text-gray);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            padding: 0.75rem 1rem;
+            border-radius: var(--border-radius-sm);
+            transition: var(--transition);
+        }
+
+        .mobile-nav a:hover,
+        .mobile-nav a.active {
+            color: var(--primary-green);
+            background: rgba(16, 185, 129, 0.1);
+        }
+
         /* Hero Section */
         .hero {
             padding: 8rem 2rem 4rem;
@@ -309,6 +376,10 @@
                 display: none;
             }
 
+            .mobile-menu-btn {
+                display: block;
+            }
+
             .page-header h1 {
                 font-size: 2rem;
             }
@@ -333,8 +404,24 @@
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="terms.html">Terms & Conditions</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="privacy.html" class="active">Privacy</a></li>
+                <li><a href="terms.html">Terms</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div class="mobile-nav" id="mobileNav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="privacy.html" class="active">Privacy</a></li>
+                <li><a href="terms.html">Terms</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -440,6 +527,24 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            mobileNav.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            const mobileNav = document.getElementById('mobileNav');
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+
+            if (!mobileNav.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                mobileNav.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 
 </html>
